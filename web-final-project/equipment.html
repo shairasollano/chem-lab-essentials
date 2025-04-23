@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrumentation and Equipment</title>
+  <link rel="stylesheet" href="subcategory.css">
+  <link rel="stylesheet" href="style.css">
+
+ <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<!-- DataTables Responsive -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+</head>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('.navbar ul');
+    navList.classList.toggle('show');
+  }
+</script>
+
+<body>
+    <div>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+        </div>
+
+        <!-- Mobile hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html #about">About Us</a></li>
+          <li class="dropdown">
+            <a href="index.html #products" class="dropbtn">Products ▼</a>
+            <div class="dropdown-content">
+                <a href="reagents.html">Chemical Reagents</a>
+                <a href="glassware.html">Glassware and Plasticware</a>
+                <a href="measuring.html">Measuring Equipment</a>
+                <a href="safety.html">Safety Equipment</a>
+                <a href="consumables.html">Lab Consumables</a>
+                <a href="storage.html">Storage Containers</a>
+                <a href="equipment.html">Instrumentation & Equipment</a>
+            </div>
+          </li>
+          <li><a href="labsafety.html">Lab Safety</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="locations.html">Locations</a></li>
+        </ul>
+        <div class="search-container">
+          <button class="search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+              <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+            </svg>
+          </button>
+          <input type="text" class="search-input" placeholder="Search...">
+        </div>
+      </nav>
+    </div>
+
+    <main>
+
+      <section class="category-hero">
+        <div class="category-overlay">
+          <h1>Instrumentation and Equipment</h1>
+          <div class="category-buttons">
+            <a href="#instrumentation-equipment" class="category-card">Browse</a>
+        </div>
+      </section>
+
+        <style>
+/* Section Styling */
+
+
+.category-hero {
+  background: url('360524.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.category-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0c142c;
+  margin-bottom: 30px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0c142c;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.equipment-section {
+  padding: 50px 20px;
+  background-color: #f9fafb;
+}
+
+.equipment-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #111827;
+}
+
+/* Table Styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 700px;
+  background-color: #fff;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #0a1a3b;
+  color: white;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+.styled-table a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.styled-table a:hover {
+  text-decoration: underline;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .equipment-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .styled-table {
+    font-size: 0.85rem;
+  }
+}
+        </style>
+
+<section id="instrumentation-equipment" class="equipment-section">
+  <div class="container">
+    <h2>Instrumentation & Equipment</h2>
+    <div class="table-container">
+      <table id="instrumentationTable" class="styled-table display">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Item</th>
+            <th>Purpose</th>
+            <th>Specifications</th>
+            <th>Supplier</th>
+            <th>Estimated Price (₱)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="images/centrifuge.gif" alt="Centrifuges" width="100"></td>
+            <td>Centrifuges</td>
+            <td>Separates substances of different densities</td>
+            <td>Benchtop / Refrigerated</td>
+            <td><a href="#">SpinLab PH</a></td>
+            <td>₱15,000 – ₱150,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/hot.jpeg" alt="Hot Plates/Stirrers" width="100"></td>
+            <td>Hot Plates/Stirrers</td>
+            <td>Heats and stirs liquids simultaneously</td>
+            <td>Digital / Magnetic Stirring</td>
+            <td><a href="#">ThermoMix Supplies</a></td>
+            <td>₱3,000 – ₱20,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/water.webp" alt="Water Baths" width="100"></td>
+            <td>Water Baths</td>
+            <td>Maintains temperature for sample incubation</td>
+            <td>Digital / Analog, 5–20L</td>
+            <td><a href="#">AquaTech PH</a></td>
+            <td>₱8,000 – ₱30,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/uv.jpeg" alt="UV Lamps" width="100"></td>
+            <td>UV Lamps</td>
+            <td>Used for sterilization and DNA visualization</td>
+            <td>254 nm / Dual wavelength</td>
+            <td><a href="#">LabBright</a></td>
+            <td>₱2,500 – ₱15,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/oven.jpg" alt="Ovens" width="100"></td>
+            <td>Ovens</td>
+            <td>Drying and sterilizing glassware or samples</td>
+            <td>Up to 300°C, Forced Air</td>
+            <td><a href="#">HeatSafe Supplies</a></td>
+            <td>₱10,000 – ₱80,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/spectro.avif" alt="Spectrophotometers" width="100"></td>
+            <td>Spectrophotometers</td>
+            <td>Measures absorbance of light in samples</td>
+            <td>UV-Vis / Portable or Benchtop</td>
+            <td><a href="#">SpecLab Instruments</a></td>
+            <td>₱50,000 – ₱250,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/incubator.jpg"Incubators" width="100"></td>
+            <td>Incubators</td>
+            <td>Maintains specific temperature for cultures</td>
+            <td>Digital / CO₂ Optional</td>
+            <td><a href="#">BioInc PH</a></td>
+            <td>₱20,000 – ₱120,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  
+
+  <script>
+    $(document).ready(function () {
+      $('#instrumentationTable').DataTable({
+        responsive: true,
+        paging: true,
+        searching: true,
+        ordering: true,
+        language: {
+          search: "Filter equipment:"
+        }
+      });
+    });
+  </script>
+  
+  
+</main>
+    
+    <script>
+    function toggleMenu() {
+    const navList = document.querySelector('.navbar ul');
+    navList.classList.toggle('show');
+    }
+    </script>
+
+</body>
+<footer id="footer">
+  <div class="footer-container">
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+      <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+      <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+    </div>
+
+    <!-- Developer Info -->
+    <div class="footer-column">
+      <h4>Developer</h4>
+      <p><strong>Shaira Marie Sollano</strong></p>
+      <p>© 2025 Chem Lab Essentials</p>
+      <p>All rights reserved.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+      </div>
+      <p class="disclaimer">
+        Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+</footer>
+
+</html>

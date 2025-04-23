@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Chemical Shops</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    #map-section {
+  background: #f4f4f4;
+  padding: 60px 20px;
+}
+
+#map-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0c142c;
+  margin-bottom: 20px;
+}
+
+.map-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+  </style>
+
+</head>
+<body>
+
+  <section>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+      </div>
+    
+      <!-- Mobile hamburger icon -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html #about">About Us</a></li>
+        <li class="dropdown">
+          <a href="index.html #products" class="dropbtn">Products ▼</a>
+          <div class="dropdown-content">
+            <a href="reagents.html">Chemical Reagents</a>
+            <a href="glassware.html">Glassware and Plasticware</a>
+            <a href="measuring.html">Measuring Equipment</a>
+            <a href="safety.html">Safety Equipment</a>
+            <a href="consumables.html">Lab Consumables</a>
+            <a href="storage.html">Storage Containers</a>
+            <a href="equipment.html">Instrumentation & Equipment</a>
+          </div>
+        </li>
+        <li><a href="labsafety.html">Lab Safety</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="locations.html">Locations</a></li>
+      
+        <!-- 👇 PLACE SEARCH RIGHT AFTER LOCATIONS -->
+        <li class="search-container">
+          <button class="search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+              <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+            </svg>
+          </button>
+          <input type="text" class="search-input" placeholder="Search...">
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="map-section" style="padding: 60px 0; background: #e6f0ff;">
+    <div style="max-width: 1000px; margin: auto; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="font-size: 2.5rem; color: #0c142c; margin-bottom: 10px;">Find Nearby Chemical Suppliers</h2>
+        <p style="font-size: 1.1rem; color: #333;">Locate trusted local sources of lab-grade chemicals across the Philippines</p>
+      </div>
+  
+      <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); background: white; padding: 10px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30886.302773917694!2d120.96117332269229!3d14.611158067821162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1schemical%20supplier%20philippines!5e0!3m2!1sen!2sph!4v1745339983071!5m2!1sen!2sph"
+          width="100%"
+          height="450"
+          style="border: 0; border-radius: 12px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>  
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  const map = L.map('map').setView([14.5995, 120.9842], 13); // Manila, for example
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([14.5995, 120.9842]).addTo(map)
+    .bindPopup('We are here!')
+    .openPopup();
+</script>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
+<script>
+function toggleMenu() {
+const navList = document.querySelector('.navbar ul');
+navList.classList.toggle('show');
+}
+</script>
+  
+</body>
+
+<footer id="footer">
+  <div class="footer-container">
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+      <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+      <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+    </div>
+
+    <!-- Developer Info -->
+    <div class="footer-column">
+      <h4>Developer</h4>
+      <p><strong>Shaira Marie Sollano</strong></p>
+      <p>© 2025 Chem Lab Essentials</p>
+      <p>All rights reserved.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+      </div>
+      <p class="disclaimer">
+        Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+</footer>
+
+</html>

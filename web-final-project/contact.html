@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Chem Lab Essentials</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* General styles for the contact page */
+    .contact-section {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0c142c;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Input Fields */
+    .contact-section input,
+    .contact-section textarea {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #f7f9fc;
+      transition: all 0.3s ease;
+    }
+
+    .contact-section textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Focus Effects */
+    .contact-section input:focus,
+    .contact-section textarea:focus {
+      border-color: #0c142c;
+      box-shadow: 0 0 8px rgba(12, 20, 44, 0.3);
+      outline: none;
+    }
+
+    /* Input Placeholder */
+    .contact-section input::placeholder,
+    .contact-section textarea::placeholder {
+      color: #777;
+    }
+
+    /* Button Styling */
+    .contact-section button {
+      padding: 14px;
+      background-color: #0c142c;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* Button Hover Effect */
+    .contact-section button:hover {
+      background-color: #1a2c4e;
+      transform: translateY(-2px);
+    }
+
+    /* Add Icons to Inputs */
+    .contact-section input[name="name"],
+    .contact-section input[name="email"],
+    .contact-section input[name="subject"] {
+      position: relative;
+      padding-left: 40px; /* Space for icon */
+    }
+
+    /* Person Icon for Name Field */
+    .contact-section input[name="name"]::before {
+      content: "\1F464";  /* Unicode for person */
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #0c142c;
+    }
+
+    /* Envelope Icon for Email Field */
+    .contact-section input[name="email"]::before {
+      content: "\2709"; /* Unicode for envelope */
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #0c142c;
+    }
+
+    /* Subject Icon */
+    .contact-section input[name="subject"]::before {
+      content: "\270F"; /* Unicode for pencil */
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #0c142c;
+    }
+
+    /* Smooth Animations for Inputs and Button */
+    .contact-section input,
+    .contact-section textarea {
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+    </div>
+  
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html #about">About Us</a></li>
+      <li class="dropdown">
+        <a href="#products" class="dropbtn">Products ▼</a>
+        <div class="dropdown-content">
+          <a href="reagents.html">Chemical Reagents</a>
+          <a href="glassware.html">Glassware and Plasticware</a>
+          <a href="measuring.html">Measuring Equipment</a>
+          <a href="safety.html">Safety Equipment</a>
+          <a href="consumables.html">Lab Consumables</a>
+          <a href="storage.html">Storage Containers</a>
+          <a href="equipment.html">Instrumentation & Equipment</a>
+        </div>
+      </li>
+      <li><a href="labsafety.html">Lab Safety</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li class="search-container">
+        <button class="search-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+            <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+          </svg>
+        </button>
+        <input type="text" class="search-input" placeholder="Search...">
+      </li>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+      <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+      <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Developer</h4>
+      <p><strong>Shaira Marie Sollano</strong></p>
+      <p>© 2025 Chem Lab Essentials</p>
+      <p>All rights reserved.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+      </div>
+      <p class="disclaimer">
+        Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+      </p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+</footer>
+
+</html>

@@ -1,0 +1,19 @@
+Name,Category,Hazards,Safety Precautions,Supplier Link
+Acetone,Solvents,Flammable,Keep away from heat, https://www.supplier1.com/acetone
+Ethanol,Solvents,Flammable,Keep away from flames, https://www.supplier1.com/ethanol
+Water,Solvents,Non-hazardous,N/A, https://www.supplier2.com/water
+Toluene,Solvents,Flammable,Use in a well-ventilated area, https://www.supplier1.com/toluene
+Methanol,Solvents,Flammable,Toxic if ingested, https://www.supplier1.com/methanol
+Hexane,Solvents,Flammable,Use with adequate ventilation, https://www.supplier3.com/hexane
+Hydrochloric Acid,Acids,Causes severe burns,Wear gloves and goggles, https://www.supplier2.com/hcl
+Sulfuric Acid,Acids,Causes severe burns,Wear protective clothing, https://www.supplier3.com/sulfuric-acid
+Nitric Acid,Acids,Corrosive,Use in a well-ventilated area, https://www.supplier3.com/nitric-acid
+Phosphoric Acid,Acids,Corrosive,Keep away from metals, https://www.supplier2.com/phosphoric-acid
+Acetic Acid,Acids,Flammable,Use in a fume hood, https://www.supplier1.com/acetic-acid
+Perchloric Acid,Acids,Oxidizer,Keep away from organic materials, https://www.supplier3.com/perchloric-acid
+Sodium Hydroxide,Bases,Causes severe burns,Wear gloves and goggles, https://www.supplier4.com/sodium-hydroxide
+Potassium Hydroxide,Bases,Causes severe burns,Wear protective clothing, https://www.supplier4.com/potassium-hydroxide
+Ammonia,Bases,Respiratory irritation,Use in a well-ventilated area, https://www.supplier5.com/ammonia
+Calcium Hydroxide,Bases,Corrosive,Use protective gloves and eyewear, https://www.supplier4.com/calcium-hydroxide
+Magnesium Hydroxide,Bases,Non-hazardous,N/A, https://www.supplier5.com/magnesium-hydroxide
+Sodium Bicarbonate,Bases,Non-hazardous,Store in a cool dry place, https://www.supplier5.com/sodium-bicarbonate

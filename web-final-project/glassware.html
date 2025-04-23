@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassware and Plasticware</title>
+  <link rel="stylesheet" href="subcategory.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<!-- DataTables Responsive -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+</head>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('.navbar ul');
+    navList.classList.toggle('show');
+  }
+</script>
+
+<body>
+    <div>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+        </div>
+
+        <!-- Mobile hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html #about">About Us</a></li>
+          <li class="dropdown">
+            <a href="index.html #products" class="dropbtn">Products ▼</a>
+            <div class="dropdown-content">
+              <a href="reagents.html">Chemical Reagents</a>
+              <a href="glassware.html">Glassware and Plasticware</a>
+              <a href="measuring.html">Measuring Equipment</a>
+              <a href="safety.html">Safety Equipment</a>
+              <a href="consumables.html">Lab Consumables</a>
+              <a href="storage.html">Storage Containers</a>
+              <a href="equipment.html">Instrumentation & Equipment</a>
+            </div>
+          </li>
+          <li><a href="labsafety.html">Lab Safety</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="locations.html">Locations</a></li>
+        </ul>
+        <div class="search-container">
+          <button class="search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+              <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+            </svg>
+          </button>
+          <input type="text" class="search-input" placeholder="Search...">
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <section class="category-hero">
+        <div class="category-overlay">
+          <h1>Glassware and Plasticware</h1>
+          <div class="category-buttons">
+            <a href="#glassware-plasticware" class="category-card">Browse</a>
+          </div>
+        </div>
+      </section>
+      
+
+        <style>
+
+  .category-hero {
+  background: url('360524.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.category-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0c142c;
+  margin-bottom: 30px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0c142c;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* General Reset */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  .styled-table th {
+    background-color: #0a1734;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .styled-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .styled-table a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .styled-table a:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 768px) {
+    .styled-table {
+      font-size: 14px;
+    }
+
+    .equipment-section {
+      padding: 20px;
+    }
+  }
+
+  table.styled-table img {
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 100px;
+  width: auto;
+}
+
+
+        </style>
+
+<section id="glassware-plasticware" class="equipment-section" style="padding: 40px;">
+  <h2 style="margin-bottom: 20px;">Glassware & Plasticware Equipment</h2>
+  <div class="table-container">
+    <table id="glassPlasticTable" class="styled-table display">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Equipment</th>
+          <th>Description</th>
+          <th>Capacity Range</th>
+          <th>Material</th>
+          <th>Supplier</th>
+          <th>Estimated Price (₱)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="images/beaker.avif" alt="Beaker" width="100"></td>
+          <td>Beakers</td>
+          <td>General-purpose container for mixing and heating liquids</td>
+          <td>50 mL – 1000 mL</td>
+          <td>Borosilicate Glass / Polypropylene</td>
+          <td><a href="#">LabMart PH</a></td>
+          <td>₱50 – ₱250</td>
+        </tr>
+        <tr>
+          <td><img src="images/erlenmeyer.webp" alt="Erlenmeyer Flask" width="100"></td>
+          <td>Erlenmeyer Flasks</td>
+          <td>Conical flasks for swirling without spilling</td>
+          <td>100 mL – 1000 mL</td>
+          <td>Borosilicate Glass</td>
+          <td><a href="#">ChemSupplies PH</a></td>
+          <td>₱80 – ₱300</td>
+        </tr>
+        <tr>
+          <td><img src="images/volumetric.jpg" alt="Volumetric Flask" width="100"></td>
+          <td>Volumetric Flasks</td>
+          <td>Precise liquid volume measurements</td>
+          <td>50 mL – 1000 mL</td>
+          <td>Glass</td>
+          <td><a href="#">Precision Labs</a></td>
+          <td>₱120 – ₱400</td>
+        </tr>
+        <tr>
+          <td><img src="images/florence.jpg" alt="Florence Flask" width="100"></td>
+          <td>Florence Flasks</td>
+          <td>Boiling and uniform heating of liquids</td>
+          <td>100 mL – 500 mL</td>
+          <td>Glass</td>
+          <td><a href="#">ReagentSource</a></td>
+          <td>₱100 – ₱350</td>
+        </tr>
+        <tr>
+          <td><img src="images/test.avif" alt="Test Tube" width="100"></td>
+          <td>Test Tubes</td>
+          <td>Used for small volume reactions and heating</td>
+          <td>10 mL – 40 mL</td>
+          <td>Glass / Plastic</td>
+          <td><a href="#">BasicLab PH</a></td>
+          <td>₱10 – ₱30 each</td>
+        </tr>
+        <tr>
+          <td><img src="images/pipette.jpeg" alt="Pipette" width="100"></td>
+          <td>Pipettes & Micropipettes</td>
+          <td>Precise liquid dispensing and transfer</td>
+          <td>0.1 µL – 25 mL</td>
+          <td>Plastic / Glass</td>
+          <td><a href="#">MicroLab Solutions</a></td>
+          <td>₱500 – ₱8,000</td>
+        </tr>
+        <tr>
+          <td><img src="images/burette.webp" alt="Burette" width="100"></td>
+          <td>Burettes</td>
+          <td>Accurate dispensing of liquids in titrations</td>
+          <td>25 mL – 100 mL</td>
+          <td>Glass</td>
+          <td><a href="#">LabStock PH</a></td>
+          <td>₱400 – ₱950</td>
+        </tr>
+        <tr>
+          <td><img src="images/petri.jpeg" alt="Petri Dish" width="100"></td>
+          <td>Petri Dishes</td>
+          <td>Used for culturing microorganisms</td>
+          <td>90 mm – 150 mm</td>
+          <td>Plastic / Glass</td>
+          <td><a href="#">BioEssence Lab</a></td>
+          <td>₱10 – ₱60 each</td>
+        </tr>
+        <tr>
+          <td><img src="images/funnel.jpg" alt="Funnel" width="100"></td>
+          <td>Funnels</td>
+          <td>Used for transferring liquids and filtering</td>
+          <td>Various sizes</td>
+          <td>Plastic / Glass</td>
+          <td><a href="#">eScience Mart</a></td>
+          <td>₱30 – ₱150</td>
+        </tr>
+        <tr>
+          <td><img src="images/wash.webp" alt="Wash Bottle" width="100"></td>
+          <td>Wash Bottles</td>
+          <td>Squeeze bottle used to rinse labware</td>
+          <td>250 mL – 1000 mL</td>
+          <td>Polyethylene</td>
+          <td><a href="#">LabExpress PH</a></td>
+          <td>₱60 – ₱200</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+  
+</main>
+
+    <script>
+    $(document).ready(function () {
+      $('#glassPlasticTable').DataTable({
+        responsive: true,
+        paging: true,
+        searching: true,
+        ordering: true,
+        language: {
+          search: "Filter equipment:"
+        }
+      });
+    });
+    </script>
+    
+    <script>
+    function toggleMenu() {
+    const navList = document.querySelector('.navbar ul');
+    navList.classList.toggle('show');
+    }
+    </script>
+
+</body>
+
+<footer id="footer">
+  <div class="footer-container">
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+      <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+      <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+    </div>
+
+    <!-- Developer Info -->
+    <div class="footer-column">
+      <h4>Developer</h4>
+      <p><strong>Shaira Marie Sollano</strong></p>
+      <p>© 2025 Chem Lab Essentials</p>
+      <p>All rights reserved.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+      </div>
+      <p class="disclaimer">
+        Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+</footer>
+
+</html>

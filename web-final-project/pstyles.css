@@ -1,0 +1,151 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(22, 22, 22);
+}
+.banner{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+p{
+    font-size: 13px;
+}
+
+.No{
+    text-align: left;
+    font-size: 10px;
+}
+.AtomNo{
+    text-align: right;
+    margin-top: -10px;
+    position: relative;
+    opacity: 0;
+
+}
+.Element{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+    
+}
+.ElementName{
+    text-align: center;
+    font-size: 9px;
+}
+
+.full{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 65px;
+    line-height: 1%;
+    border-radius: 8px;
+    position: static;
+    color: white;
+    transition: transform 0.1s ease-in-out;
+}
+
+
+#Reactive-non-metals{
+    background-color: rgb(110, 110, 150);
+}
+#Unknown-properties{
+    background-color: grey;
+}
+#Transition-metals{
+    background-color: rgb(116, 79, 172);
+}
+#Alkali-metals{
+    background-color: teal;
+}
+#Alkaline-earth-metals{
+    background-color: #a32560f9;
+}
+#Lanthanides{
+    background-color : #026592;
+}
+#Actinides{
+    background-color: #91672C;
+}
+#Post-transition-metals{
+    background-color: seagreen;
+}
+#Noble-gases{
+    background-color: #85253d;
+}
+#Metalloids{
+    background-color: #80471C;
+}
+a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    padding: 60px;
+}
+a .alkali{
+    background-color: teal;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .alkaline{
+    background-color: #a32560f9;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .Transition-metals{
+    background-color:  rgb(116, 79, 172);
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .Post-transition-metals{
+    background-color: seagreen;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .Metalloids{
+    background-color:  #80471C;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+
+a .Reactive-non-metals{
+    margin-left: -70px;
+    background-color: rgb(110, 110, 150);
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .Noble-gases{
+    background-color:  #85253d;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .Unknown-properties{
+    background-color: grey;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+a .Lanthanides{
+    background-color : #026592;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}
+
+a .Actinides{
+    background-color: #91672C;
+    border-style: double;
+    border-color: white;
+    border-radius: 50%;
+}

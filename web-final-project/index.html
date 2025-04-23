@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chem Lab Essentials</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+          <h1>CHEM LAB ESSENTIALS</h1>
+          <p>Explore premium lab essentials and chemical reagents available in the Philippines.</p>
+          <div class="buttons">
+            <a href="#about" class="btn">Learn More</a>
+            <a href="#products" class="btn btn-white">Browse</a>
+          </div>
+        </div>
+
+        <nav class="navbar">
+          <div class="logo">
+            <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+          </div>
+        
+          <!-- Mobile hamburger icon -->
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+        
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li class="dropdown">
+              <a href="#products" class="dropbtn">Products ▼</a>
+              <div class="dropdown-content">
+                <a href="reagents.html">Chemical Reagents</a>
+                <a href="glassware.html">Glassware and Plasticware</a>
+                <a href="measuring.html">Measuring Equipment</a>
+                <a href="safety.html">Safety Equipment</a>
+                <a href="consumables.html">Lab Consumables</a>
+                <a href="storage.html">Storage Containers</a>
+                <a href="equipment.html">Instrumentation & Equipment</a>
+              </div>
+            </li>
+            <li><a href="labsafety.html">Lab Safety</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="locations.html">Locations</a></li>
+          
+            <!-- 👇 PLACE SEARCH RIGHT AFTER LOCATIONS -->
+            <li class="search-container">
+              <button class="search-btn" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+                  <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+                </svg>
+              </button>
+              <input type="text" class="search-input" placeholder="Search...">
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-wrapper">
+          <h2 class="section-title">About Chem Lab Essentials</h2>
+          <p class="about-intro">
+            <strong>Chem Lab Essentials</strong> is a project developed by a group of passionate developers aiming to create a helpful guide website for laboratory chemicals and equipment in the Philippines. Our goal is to make it easier for users to browse lab essentials, compare prices, and locate nearby suppliers with confidence and ease.
+          </p>
+      
+          <div class="about-grid">
+            <div class="about-text">
+              <h3>What We Do</h3>
+              <p>
+                We provide a centralized platform where users can explore detailed listings of chemical reagents, laboratory glassware, storage containers, safety tools, and more. Whether you're canvassing prices or searching for suppliers within your region, our site is built to assist you every step of the way.
+              </p>
+      
+              <h3>Our Vision</h3>
+              <ul class="values-list">
+                <li>🧪 User-friendly access to lab chemical and item databases</li>
+                <li>📍 Localized listings and nearby supplier mapping</li>
+                <li>💸 Transparent pricing to help with budgeting and purchasing</li>
+                <li>🎓 Educational content with safety and usage information</li>
+              </ul>
+            </div>
+      
+            <div class="about-image">
+              <img src="about.webp" alt="Our Developer Team at Chem Lab Essentials">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="products" class="content-section">
+        <div class="content-wrapper">
+          <h2 data-aos="fade-down">Product Categories</h2>
+          <p data-aos="fade-in" data-aos-delay="200">...</p>
+    
+          <div class="card-list">
+
+            <a href="reagents.html" class="card" data-aos="fade-up">
+              <img src="reagents.png" alt="Chemical Reagents">
+              <h3>Chemical Reagents</h3>
+            </a>
+          
+            <a href="glassware.html" class="card" data-aos="fade-up" data-aos-delay="100">
+              <img src="glassware.jpg" alt="Glassware and Plasticware">
+              <h3>Glassware and Plasticware</h3>
+            </a>
+          
+            <a href="measuring.html" class="card" data-aos="fade-up" data-aos-delay="200">
+              <img src="measuring.jpg" alt="Measuring Equipment">
+              <h3>Measuring Equipment</h3>
+            </a>
+          
+            <a href="safety.html" class="card" data-aos="fade-up" data-aos-delay="300">
+              <img src="safety.jpeg" alt="Safety Equipment">
+              <h3>Safety Equipment</h3>
+            </a>
+          
+            <a href="consumables.html" class="card" data-aos="fade-up" data-aos-delay="400">
+              <img src="consumables.jpg" alt="Lab Consumables">
+              <h3>Lab Consumables</h3>
+            </a>
+          
+            <a href="storage.html" class="card" data-aos="fade-up" data-aos-delay="500">
+              <img src="storage.jpg" alt="Storage Containers">
+              <h3>Storage Containers</h3>
+            </a>
+          
+            <a href="equipment.html" class="card" data-aos="fade-up" data-aos-delay="600">
+              <img src="equipment.avif" alt="Instrumentation & Equipment">
+              <h3>Instrumentation & Equipment</h3>
+            </a>
+          
+          </div>
+        </div>
+      </section>
+
+      <section id="periodic-table" class="periodic-section">
+        <div class="periodic-wrapper">
+          <h2 data-aos="fade-down">Explore the Periodic Table</h2>
+          <p data-aos="fade-in" data-aos-delay="200"></p>
+          <div class="responsive-iframe-container">
+            <iframe src="https://ptable.com/#Properties" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        function toggleSearch() {
+          const container = document.querySelector('.search-container');
+          container.classList.toggle('active');
+          const input = container.querySelector('.search-input');
+          if (container.classList.contains('active')) {
+            input.focus();
+          }
+        }
+      </script>
+      <!-- AOS JS -->
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+      AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true      // animate only once
+      });
+      </script>
+
+      <script>
+        function toggleMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('active');
+        }
+      </script>
+
+      <script>
+      function toggleMenu() {
+      const navList = document.querySelector('.navbar ul');
+      navList.classList.toggle('show');
+      }
+      </script>
+
+</body>
+
+<footer id="footer">
+  <div class="footer-container">
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+      <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+      <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+    </div>
+
+    <!-- Developer Info -->
+    <div class="footer-column">
+      <h4>Developer</h4>
+      <p><strong>Shaira Marie Sollano</strong></p>
+      <p>© 2025 Chem Lab Essentials</p>
+      <p>All rights reserved.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+      </div>
+      <p class="disclaimer">
+        Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+</footer>
+
+<script>
+  // Show/hide back to top button
+  window.addEventListener('scroll', function () {
+    const backToTop = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+
+  // Scroll to top functionality
+  document.getElementById('backToTop').addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+
+</html>

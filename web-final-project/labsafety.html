@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Safety | Chem Lab Essentials</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9fbfd;
+      color: #1f2937;
+    }
+
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2, h3 {
+      color: #0e7490;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: left;
+      padding: 1rem;
+      background-color: #e2e8f0;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <section>
+        
+        <nav class="navbar">
+          <div class="logo">
+            <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+          </div>
+        
+          <!-- Mobile hamburger icon -->
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+        
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li class="dropdown">
+              <a href="#products" class="dropbtn">Products ▼</a>
+              <div class="dropdown-content">
+                <a href="reagents.html">Chemical Reagents</a>
+                <a href="glassware.html">Glassware and Plasticware</a>
+                <a href="measuring.html">Measuring Equipment</a>
+                <a href="safety.html">Safety Equipment</a>
+                <a href="consumables.html">Lab Consumables</a>
+                <a href="storage.html">Storage Containers</a>
+                <a href="equipment.html">Instrumentation & Equipment</a>
+              </div>
+            </li>
+            <li><a href="labsafety.html">Lab Safety</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="locations.html">Locations</a></li>
+          
+            <!-- 👇 PLACE SEARCH RIGHT AFTER LOCATIONS -->
+            <li class="search-container">
+              <button class="search-btn" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+                  <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+                </svg>
+              </button>
+              <input type="text" class="search-input" placeholder="Search...">
+            </li>
+          </ul>
+        </nav>
+      </section>
+  <header>
+    <h1>Laboratory Safety Guidelines</h1> 
+  </header>
+
+  <main>
+    <section>
+      <h2>Importance of Laboratory Safety</h2>
+      <p>Laboratory safety encompasses all practices, protocols, and behaviors designed to prevent accidents, injuries, and exposure to hazardous materials. It's essential for protecting individuals, research integrity, and the environment.</p>
+      <ul>
+        <li><strong>Protects Health and Lives</strong> – Prevents injuries and illnesses.</li>
+        <li><strong>Ensures Legal Compliance</strong> – Adheres to regulations like OSHA.</li>
+        <li><strong>Maintains Research Integrity</strong> – Ensures valid experimental outcomes.</li>
+        <li><strong>Prevents Property Damage</strong> – Reduces risk of fire, explosion, and spills.</li>
+        <li><strong>Environmental Protection</strong> – Ensures proper waste disposal and pollution control.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Common Laboratory Hazards</h2>
+      <h3>Chemical Hazards</h3>
+      <ul>
+        <li>Toxic substances causing acute or chronic health issues.</li>
+        <li>Flammable/explosive materials.</li>
+        <li>Corrosive chemicals like strong acids and bases.</li>
+        <li>Reactive substances that may ignite or explode.</li>
+      </ul>
+
+      <h3>Biological Hazards</h3>
+      <ul>
+        <li>Pathogenic microorganisms (bacteria, viruses).</li>
+        <li>Allergens and biological toxins.</li>
+      </ul>
+
+      <h3>Physical Hazards</h3>
+      <ul>
+        <li>Sharp instruments, broken glass.</li>
+        <li>Noise and radiation.</li>
+      </ul>
+
+      <h3>Ergonomic Hazards</h3>
+      <ul>
+        <li>Repetitive strain injuries and poor posture.</li>
+      </ul>
+
+      <h3>Psychological Hazards</h3>
+      <ul>
+        <li>Stress and fatigue from long hours or high workloads.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Essential Lab Safety Rules</h2>
+      <ol>
+        <li>Wear appropriate PPE: lab coat, gloves, goggles.</li>
+        <li>Know where safety equipment is located and how to use it.</li>
+        <li>Never work alone in the lab.</li>
+        <li>No food or drink allowed.</li>
+        <li>Label all chemicals correctly.</li>
+        <li>Understand chemical properties before use.</li>
+        <li>Conduct only authorized experiments.</li>
+        <li>Dispose of waste properly.</li>
+        <li>Keep workspace clean and organized.</li>
+        <li>Never pipette by mouth.</li>
+        <li>Use fume hoods for volatile substances.</li>
+        <li>Wear closed-toe shoes and cover skin.</li>
+        <li>Report accidents immediately.</li>
+        <li>Know emergency procedures.</li>
+        <li>Handle glassware with care.</li>
+        <li>Check electrical equipment regularly.</li>
+        <li>Use caution with gas cylinders and vacuum systems.</li>
+        <li>No children or pets allowed in labs.</li>
+        <li>Assess risks and prepare for emergencies.</li>
+        <li>Promote a culture of safety at all times.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>Maintaining a safe laboratory environment is everyone’s responsibility. Through awareness, training, and a proactive mindset, we can reduce risks and ensure scientific progress continues without harm.</p>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-container">
+  
+      <!-- Contact Info -->
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+        <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+        <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+      </div>
+  
+      <!-- Developer Info -->
+      <div class="footer-column">
+        <h4>Developer</h4>
+        <p><strong>Shaira Marie Sollano</strong></p>
+        <p>© 2025 Chem Lab Essentials</p>
+        <p>All rights reserved.</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Connect with Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+        </div>
+        <p class="disclaimer">
+          Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+        </p>
+      </div>
+  
+    </div>
+  
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to Top">↑</button>
+  </footer>
+  
+</body>
+</html>

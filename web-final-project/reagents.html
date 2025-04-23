@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Reagents</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="subcategory.css">
+
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<!-- DataTables Responsive -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+
+<style>
+  /* Responsive nav */
+
+  .category-hero {
+  background: url('360524.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.category-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0c142c;
+  margin-bottom: 30px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0c142c;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* NAVBAR */
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #000;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Chem Lab Essentials</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="glassware.html">Glassware</a>
+      <a href="reagents.html" class="active">Reagents</a>
+      <!-- etc -->
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  
+    <div>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo6.png" alt="Chem Lab Essentials Logo" />
+        </div>
+
+        <!-- Mobile hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html #about">About Us</a></li>
+          <li class="dropdown">
+            <a href="index.html #products" class="dropbtn">Products ▼</a>
+            <div class="dropdown-content">
+              <a href="reagents.html">Chemical Reagents</a>
+              <a href="glassware.html">Glassware and Plasticware</a>
+              <a href="measuring.html">Measuring Equipment</a>
+              <a href="safety.html">Safety Equipment</a>
+              <a href="consumables.html">Lab Consumables</a>
+              <a href="storage.html">Storage Containers</a>
+              <a href="equipment.html">Instrumentation & Equipment</a>
+            </div>
+          </li>
+          <li><a href="labsafety.html">Lab Safety</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="locations.html">Locations</a></li>
+        </ul>
+        <div class="search-container">
+          <button class="search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" class="search-icon">
+              <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+            </svg>
+          </button>
+          <input type="text" class="search-input" placeholder="Search...">
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <section class="category-hero">
+        <div class="category-overlay">
+          <h1>Chemical Reagents</h1>
+          <div class="category-buttons">
+            <a href="#solvents" class="category-card">Solvents</a>
+            <a href="#acids" class="category-card">Acids</a>
+            <a href="#bases" class="category-card">Bases</a>
+          </div>
+        </div>
+      </section>
+
+  <section id="solvents" class="subcategory-section">
+    <h3>Solvents</h3>
+    <p>Solvents are substances that dissolve other materials without chemically changing them. Common examples include ethanol, acetone, and hexane.</p>
+    <div class="table-container">
+      <table id="solventstable" class="reagents-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Chemical Formula</th>
+            <th>Hazards</th>
+            <th>Safety Precautions</th>
+            <th>Supplier</th>
+            <th>Estimated Price (₱)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Acetone</td>
+            <td>C₃H₆O</td>
+            <td>Flammable, Eye irritation</td>
+            <td>Keep away from heat and open flames</td>
+            <td><a href="https://labworldph.com/acetone" target="_blank">LabWorld PH</a></td>
+            <td>₱500 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Ethanol (95%)</td>
+            <td>C₂H₅OH</td>
+            <td>Flammable</td>
+            <td>Use in a well-ventilated area</td>
+            <td><a href="https://chemcentral.ph/ethanol" target="_blank">ChemCentral</a></td>
+            <td>₱450 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Methanol</td>
+            <td>CH₃OH</td>
+            <td>Flammable, Toxic if ingested</td>
+            <td>Wear gloves, use in fume hood</td>
+            <td><a href="https://scimart.ph/methanol" target="_blank">SciMart</a></td>
+            <td>₱600 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Toluene</td>
+            <td>C₆H₅CH₃</td>
+            <td>Flammable, Respiratory irritation</td>
+            <td>Use respiratory protection</td>
+            <td><a href="https://labdepot.ph/toluene" target="_blank">LabDepot PH</a></td>
+            <td>₱550 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Hexane</td>
+            <td>C₆H₁₄</td>
+            <td>Flammable, May cause dizziness</td>
+            <td>Use with adequate ventilation</td>
+            <td><a href="https://reactivesph.com/hexane" target="_blank">ReactivesPH</a></td>
+            <td>₱700 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Diethyl Ether</td>
+            <td>C₄H₁₀O</td>
+            <td>Highly flammable, Explosive vapors</td>
+            <td>Avoid sparks and static discharge</td>
+            <td><a href="https://labstock.ph/diethyl-ether" target="_blank">LabStock PH</a></td>
+            <td>₱950 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Isopropanol (IPA)</td>
+            <td>C₃H₈O</td>
+            <td>Flammable, Eye irritation</td>
+            <td>Avoid contact with eyes</td>
+            <td><a href="https://chemworld.com.ph/isopropanol" target="_blank">ChemWorld</a></td>
+            <td>₱350 / 500mL</td>
+          </tr>
+          <tr>
+            <td>DMF (Dimethylformamide)</td>
+            <td>C₃H₇NO</td>
+            <td>Toxic, Harmful if absorbed</td>
+            <td>Wear full PPE, work in fume hood</td>
+            <td><a href="https://labxpress.ph/dmf" target="_blank">LabXpress</a></td>
+            <td>₱850 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Chloroform</td>
+            <td>CHCl₃</td>
+            <td>Carcinogenic, Harmful if inhaled</td>
+            <td>Use in fume hood</td>
+            <td><a href="https://reagenthouse.com.ph/chloroform" target="_blank">ReagentHouse</a></td>
+            <td>₱1,000 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Acetonitrile</td>
+            <td>CH₃CN</td>
+            <td>Flammable, Harmful if swallowed</td>
+            <td>Use in fume hood, avoid skin contact</td>
+            <td><a href="https://chemlineph.com/acetonitrile" target="_blank">ChemLine PH</a></td>
+            <td>₱900 / 500mL</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section id="acids" class="subcategory-section">
+    <h3>Acids</h3>
+    <p>Acids are substances that release hydrogen ions in solution. Examples include hydrochloric acid (HCl), sulfuric acid (H₂SO₄), and acetic acid (CH₃COOH).</p>
+    <div class="table-container">
+      <table id="acidstable" class="reagents-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Chemical Formula</th>
+            <th>Hazards</th>
+            <th>Safety Precautions</th>
+            <th>Supplier</th>
+            <th>Estimated Price (₱)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hydrochloric Acid</td>
+            <td>HCl</td>
+            <td>Corrosive, Respiratory irritation</td>
+            <td>Use gloves, goggles, and fume hood</td>
+            <td><a href="https://chemcentral.ph/hcl" target="_blank">ChemCentral</a></td>
+            <td>₱300 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Sulfuric Acid</td>
+            <td>H₂SO₄</td>
+            <td>Highly corrosive, Severe burns</td>
+            <td>Use face shield and chemical-resistant gloves</td>
+            <td><a href="https://labworldph.com/sulfuric-acid" target="_blank">LabWorld PH</a></td>
+            <td>₱350 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Nitric Acid</td>
+            <td>HNO₃</td>
+            <td>Corrosive, Toxic fumes</td>
+            <td>Use in fume hood with PPE</td>
+            <td><a href="https://scimart.ph/nitric-acid" target="_blank">SciMart</a></td>
+            <td>₱400 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Acetic Acid (Glacial)</td>
+            <td>CH₃COOH</td>
+            <td>Corrosive, Flammable vapors</td>
+            <td>Handle in ventilated area with gloves</td>
+            <td><a href="https://chemworld.com.ph/acetic" target="_blank">ChemWorld</a></td>
+            <td>₱280 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Phosphoric Acid</td>
+            <td>H₃PO₄</td>
+            <td>Corrosive</td>
+            <td>Avoid skin contact, wear goggles</td>
+            <td><a href="https://labxpress.ph/phosphoric" target="_blank">LabXpress</a></td>
+            <td>₱320 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Formic Acid</td>
+            <td>HCOOH</td>
+            <td>Corrosive, Irritating to skin and eyes</td>
+            <td>Use gloves and goggles, ensure ventilation</td>
+            <td><a href="https://chemcentral.ph/formic-acid" target="_blank">ChemCentral</a></td>
+            <td>₱310 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Hydrofluoric Acid</td>
+            <td>HF</td>
+            <td>Highly toxic, Causes deep tissue damage</td>
+            <td>Use calcium gluconate gel as antidote, PPE required</td>
+            <td><a href="https://reactivesph.com/hydrofluoric" target="_blank">ReactivesPH</a></td>
+            <td>₱600 / 500mL</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="bases" class="subcategory-section">
+    <h3>Bases</h3>
+    <p>Bases are substances that accept hydrogen ions in solution. Common examples include sodium hydroxide (NaOH), potassium hydroxide (KOH), and ammonia (NH₃).</p>
+    <div class="table-container">
+      <table id="basestable" class="reagents-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Chemical Formula</th>
+            <th>Hazards</th>
+            <th>Safety Precautions</th>
+            <th>Supplier</th>
+            <th>Estimated Price (₱)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sodium Hydroxide</td>
+            <td>NaOH</td>
+            <td>Corrosive, Causes burns</td>
+            <td>Use gloves and goggles, avoid contact with skin</td>
+            <td><a href="https://chemworld.com.ph/naoh" target="_blank">ChemWorld</a></td>
+            <td>₱220 / 500g</td>
+          </tr>
+          <tr>
+            <td>Potassium Hydroxide</td>
+            <td>KOH</td>
+            <td>Corrosive, Causes severe skin burns</td>
+            <td>Use in well-ventilated area with full PPE</td>
+            <td><a href="https://scimart.ph/koh" target="_blank">SciMart</a></td>
+            <td>₱250 / 500g</td>
+          </tr>
+          <tr>
+            <td>Ammonium Hydroxide</td>
+            <td>NH₄OH</td>
+            <td>Corrosive, Toxic fumes</td>
+            <td>Use in fume hood with gloves and goggles</td>
+            <td><a href="https://labxpress.ph/ammonium-hydroxide" target="_blank">LabXpress</a></td>
+            <td>₱180 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Calcium Hydroxide</td>
+            <td>Ca(OH)₂</td>
+            <td>Causes irritation, Harmful if swallowed</td>
+            <td>Wear gloves and goggles, avoid inhalation</td>
+            <td><a href="https://reactivesph.com/calcium-hydroxide" target="_blank">ReactivesPH</a></td>
+            <td>₱300 / 500g</td>
+          </tr>
+          <tr>
+            <td>Sodium Carbonate</td>
+            <td>Na₂CO₃</td>
+            <td>Causes irritation, Harmful if ingested</td>
+            <td>Wear gloves, avoid contact with eyes</td>
+            <td><a href="https://chemlineph.com/sodium-carbonate" target="_blank">ChemLine PH</a></td>
+            <td>₱280 / 500g</td>
+          </tr>
+          <tr>
+            <td>Magnesium Hydroxide</td>
+            <td>Mg(OH)₂</td>
+            <td>Causes irritation to eyes and skin</td>
+            <td>Wear gloves and goggles</td>
+            <td><a href="https://labdepot.ph/magnesium-hydroxide" target="_blank">LabDepot PH</a></td>
+            <td>₱350 / 500g</td>
+          </tr>
+          <tr>
+            <td>Sodium Bicarbonate</td>
+            <td>NaHCO₃</td>
+            <td>May cause irritation</td>
+            <td>Use gloves for protection</td>
+            <td><a href="https://labworldph.com/sodium-bicarbonate" target="_blank">LabWorld PH</a></td>
+            <td>₱200 / 500g</td>
+          </tr>
+          <tr>
+            <td>Potassium Bicarbonate</td>
+            <td>KHC₆H₅O₆</td>
+            <td>May cause irritation to eyes and skin</td>
+            <td>Wear gloves and goggles</td>
+            <td><a href="https://chemcentral.ph/potassium-bicarbonate" target="_blank">ChemCentral</a></td>
+            <td>₱250 / 500g</td>
+          </tr>
+          <tr>
+            <td>Ammonia Solution</td>
+            <td>NH₃(aq)</td>
+            <td>Causes severe irritation, Toxic fumes</td>
+            <td>Use in a well-ventilated area with PPE</td>
+            <td><a href="https://scimart.ph/ammonia-solution" target="_blank">SciMart</a></td>
+            <td>₱220 / 500mL</td>
+          </tr>
+          <tr>
+            <td>Sodium Hydroxide Pellets</td>
+            <td>NaOH</td>
+            <td>Corrosive, May cause burns</td>
+            <td>Wear protective gloves, goggles, and lab coat</td>
+            <td><a href="https://labstock.ph/naoh-pellets" target="_blank">LabStock PH</a></td>
+            <td>₱350 / 500g</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+</main>
+
+
+    
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<script>
+  document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#solventstable').DataTable({
+      responsive: true
+    });
+    $('#acidstable').DataTable({
+      responsive: true
+    });
+    $('#basestable').DataTable({
+      responsive: true
+    });
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
+<script>
+function toggleMenu() {
+const navList = document.querySelector('.navbar ul');
+navList.classList.toggle('show');
+}
+</script>
+
+
+</body>
+<footer id="footer">
+  <div class="footer-container">
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong><br> info@chemlabessentials.ph</p>
+      <p><strong>Phone:</strong><br> +63 965 783 6384</p>
+      <p><strong>Address:</strong><br> 1400, 173 Congressional Road, Caloocan </p>
+    </div>
+
+    <!-- Developer Info -->
+    <div class="footer-column">
+      <h4>Developer</h4>
+      <p><strong>Shaira Marie Sollano</strong></p>
+      <p>© 2025 Chem Lab Essentials</p>
+      <p>All rights reserved.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" title="Instagram"></a>
+      </div>
+      <p class="disclaimer">
+        Disclaimer: Images and content are for educational purposes only. All assets belong to the respective owners.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+</footer>
+
+</html>
